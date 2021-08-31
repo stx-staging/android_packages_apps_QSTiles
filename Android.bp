@@ -1,0 +1,10 @@
+android_app {
+    name: "StatixQSTiles",
+    defaults: ["SettingsLibDefaults"],
+    resource_dirs: ["res"],
+    srcs: ["src/**/*.java", "src/**/*.kt"],
+    privileged: true,
+    platform_apis: true,
+    certificate: "platform",
+    system_ext_specific: true,
+}
