@@ -18,8 +18,21 @@
           android:versionCode="1"
           android:versionName="1.0" >
 
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
     <application
         android:label="@string/app_title">
+
+        <service
+            android:name=".HeadsUpTileService"
+            android:exported="true"
+            android:label="@string/quick_settings_heads_up_label"
+            android:icon="@drawable/ic_qs_heads_up"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
 
     </application>
 </manifest>
